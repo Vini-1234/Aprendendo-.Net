@@ -50,13 +50,13 @@ namespace SalesWebMvc
         {
             //Localização criada para apenas os estados unidos.
             var enUs = new CultureInfo("en-US");
-            var localizationOption = new RequestLocalizationOptions
+            var localizationOptions = new RequestLocalizationOptions
             {
                 DefaultRequestCulture = new RequestCulture(enUs),
                 SupportedCultures = new List<CultureInfo> { enUs },
                 SupportedUICultures = new List<CultureInfo> { enUs }
             };
-            app.UseRequestLocalization(localizationOption);
+            app.UseRequestLocalization(localizationOptions);
            
             if (env.IsDevelopment())
             {
